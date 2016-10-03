@@ -1,0 +1,26 @@
+{
+    "name": "itigoppo/hp-event-calendar",
+    "description": "event",
+    "type": "library",
+    "require": {
+        "nesbot/carbon": "^1.21",
+        "electrolinux/phpquery": "^0.9.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "itigoppo",
+            "email": "itigoppo+github@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Hanauta\\HpEventCalendar\\": "src",
+            "Hanauta\\HpEventCalendar\\Test\\": "tests"
+        }
+    }
+}

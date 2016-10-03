@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="bootstrap.php"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        verbose="true"
+        stopOnFailure="true"
+        processIsolation="false"
+        backupGlobals="false"
+        syntaxCheck="true"
+>
+    <php>
+        <ini name="memory_limit" value="-1"/>
+        <ini name="apc.enable_cli" value="1"/>
+    </php>
+    <!-- Add any additional test suites you want to run here -->
+    <testsuites>
+        <testsuite name="HP Event Calendar Test Suite">
+            <directory>./TestCase</directory>
+        </testsuite>
+    </testsuites>
+    <!-- Prevent coverage reports from looking in tests and vendors -->
+    <filter>
+        <blacklist>
+            <directory suffix=".php">./vendor/</directory>
+            <directory suffix=".php">./tests/</directory>
+        </blacklist>
+    </filter>
+</phpunit>

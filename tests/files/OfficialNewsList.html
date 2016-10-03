@@ -1,0 +1,153 @@
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ハロー！プロジェクト各グループ、メンバーのコンサート、イベント、舞台情報をご覧いただけます。">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>コンサート＆イベント｜ハロー！プロジェクト　オフィシャルサイト</title>
+    <!--[if lt IE 9]><script src="http://cdn.helloproject.com/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="http://cdn.helloproject.com/css/style.css">
+    <link rel="shortcut icon" href="http://cdn.helloproject.com/favicon/helloproject.ico">
+    <meta name="google-translate-customization" content="d5d7e02b75f5a32b-ff6af2989e55f73a-g2e60d23ce55640b4-14"></meta>
+</head>
+<body class="event">
+
+
+<header>
+    <div id="header_inner">
+        <h1><a href="/">HELLO! PROJECT SINCE1998</a></h1>
+        <div id="tool_box">
+            <div id="google_translate_element"></div>
+            <!--div id="search_word"><input type="text" id="text"><input type="submit" value="" id="submit"></div-->
+        </div>
+    </div>
+</header>
+<nav class="global">
+    <ul>
+        <li><a href="/news/">ニュース</a></li>
+        <li><a href="/artist/">アーティスト</a></li>
+        <li><a href="/release/">リリース</a></li>
+        <li><a href="/media/">メディア</a></li>
+        <li class="active">コンサート＆イベント</li>
+        <li><a href="/shop/">ショップ＆通販</a></li>
+        <li><a href="/mobile/site/">アプリ＆モバイル</a></li>
+        <li><a href="http://www.up-fc.jp/helloproject/" target="_blank">ファンクラブ</a></li>
+        <li><a href="/link/">リンク</a></li>
+
+    </ul>
+</nav>
+
+<div id="container" class="cf">
+
+    <!-- other title -->
+
+    <div id="other_title" class="mbox">
+
+        <div id="other_title_box">
+
+            <h2>CONCERT＆EVENT</h2>
+
+            <ul id="crumb">
+                <li class="top"><a href="/">トップ</a></li>
+                <li>コンサート＆イベント</li>
+            </ul>
+
+        </div>
+
+    </div>	<!-- / other title -->
+
+    <!-- event contents -->
+    <div id="wrapper_tab">
+
+        <div id="tab_menu" class="cf">
+            <div><a href="/event/" >ALL</a></div>
+
+            <div><a href="/event/concert/" >CONCERT</a></div>
+            <div><a href="/event/event/" >EVENT</a></div>
+            <div><a href="/event/stage/" class="active">STAGE</a></div>
+        </div>
+
+        <select id="artist_change" class="select-typeC">
+
+            <option></option>
+            <option value="helloproject">Hello!Project</option>
+            <option value="c-ute">℃-ute</option>
+            <option value="morningmusume">モーニング娘。'16</option>
+            <option value="angerme">アンジュルム</option>
+            <option value="juicejuice">Juice=Juice</option>
+            <option value="countrygirls">カントリー・ガールズ</option>
+            <option value="kobushifactory">こぶしファクトリー</option>
+            <option value="tsubakifactory">つばきファクトリー</option>
+            <option value="mitsuiaika">光井愛佳</option>
+            <option value="rihosayashi">鞘師里保</option>
+            <option value="helloprokenshusei">ハロプロ研修生</option>
+            <option value="helloprokenshuseihokkaido">ハロプロ研修生北海道</option>
+
+        </select>
+
+    </div>
+    <div id="news_contents" class="mbox">
+        <ul>
+            <li class="angerme helloprokenshusei ">
+                <time class="icon-time">2016/10/01～2016/10/10</time>
+                <div class="icon-schedule stage">STAGE</div>
+                <div class="icon-name angerme">アンジュルム</div><div class="icon-name helloprokenshusei">ハロプロ研修生</div>				<p><a href="./OfficialNewsDetail.html">全労済ホール/スペース・ゼロ提携公演&nbsp; 演劇女子部「モード」</a></p>
+            </li>
+
+
+        </ul>
+
+    </div>
+    <!-- / event contents -->
+
+</div>
+
+<footer id="footer">
+    <ul>
+        <li><a href="/info/contact/">お問い合わせ</a></li>
+        <li> | <a href="/privacy/">個人情報保護方針</a></li>
+        <!--li> | <a href="/info/sitemap/">サイトマップ</a></li-->
+
+    </ul>
+    <span class="icon-copyright">&copy;</span>DC FACTORY All Rights Reserved.
+</footer>
+<p id="page-top"><a href="#wrap">PAGE TOP</a></p>
+
+<script src="http://cdn.helloproject.com/js/jquery.min.js"></script>
+<script src="http://cdn.helloproject.com/js/jquery.script.js"></script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- #analytics -->
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11654447-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+</script>
+<!-- / #analytics --><script>
+    $(function(){
+        $("#artist_change").change(function(){
+            console.log($(this).val());
+            var artist = $(this).val();
+            $('#news_contents li').hide();
+            switch (artist) {
+                case 'morningmusume'    : $('#news_contents li.morningmusume').show();     break;
+                case 'berryzkobo'       : $('#news_contents li.berryzkobo').show();        break;
+                case 'c-ute'            : $('#news_contents li.c-ute').show();             break;
+                case 'smileage'         : $('#news_contents li.smileage').show();          break;
+                case 'angerme'          : $('#news_contents li.angerme').show();           break;
+                case 'juicejuice'       : $('#news_contents li.juicejuice').show();        break;
+                case 'countrygirls'     : $('#news_contents li.countrygirls').show();      break;
+                case 'mitsuiaika'       : $('#news_contents li.mitsuiaika').show();        break;
+                case 'helloprokenshusei': $('#news_contents li.helloprokenshusei').show(); break;
+                case 'helloproject'     : $('#news_contents li.helloproject').show();      break;
+                case 'kobushifactory'     : $('#news_contents li.kobushifactory').show();      break;
+                case 'tsubakifactory'     : $('#news_contents li.tsubakifactory').show();      break;
+                default : $('#news_contents li').show(); break;
+            }
+        });
+    });
+</script>
+</body>
+</html>
