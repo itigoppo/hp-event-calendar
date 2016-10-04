@@ -15,6 +15,9 @@
         <ini name="memory_limit" value="-1"/>
         <ini name="apc.enable_cli" value="1"/>
     </php>
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
     <!-- Add any additional test suites you want to run here -->
     <testsuites>
         <testsuite name="HP Event Calendar Test Suite">
