@@ -141,4 +141,22 @@ class Official
 
         return $performanceTimeMinutes;
     }
+
+    /**
+     * 会場情報を整頓する
+     * @param $text
+     * @return string
+     */
+    protected function formatColumnPlace($text)
+    {
+        $text = str_replace(PHP_EOL, '', $text);
+        $text = str_replace('終了 ', '', $text);
+        $pricePos = mb_strpos($text, '料金');
+        if ($pricePos !== false) {
+            $text = mb_substr($text, 0, $pricePos);
+        }
+        $text = trim($text);
+
+        return $text;
+    }
 }

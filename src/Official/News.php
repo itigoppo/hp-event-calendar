@@ -85,6 +85,10 @@ class News extends Official
                 $startDate = $this->formatColumnDate($val[self::HEADER_DAY],$val[self::HEADER_START_TIME]);
                 $val[self::HEADER_START_DATE] = $startDate;
             }
+            if (!empty($val[self::HEADER_PLACE])) {
+                $place = $this->formatColumnPlace($val[self::HEADER_PLACE]);
+                $val[self::HEADER_PLACE] = $place;
+            }
 
             $events[$val[self::HEADER_DAY]][] = $val;
         }
